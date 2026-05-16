@@ -1,105 +1,122 @@
-/* --- Variáveis de Cores (Estilo "Consciência Amazônica" - PDF) --- */
+/* --- Paleta de Cores e Estilo Retrô Psicodélico (Inspirado no PDF) --- */
 :root {
-    --bg-creme: #FFF9F2;     /* Fundo principal suave */
-    --retro-orange: #F17A28; /* Laranja do PDF */
-    --retro-green: #B9D536;  /* Verde limão do PDF */
-    --retro-pink: #E073A9;   /* Rosa do PDF */
-    --text-dark: #2B2B2B;
+    --retro-cream: #FFF5EB;    /* Fundo creme quente anos 70 */
+    --retro-orange: #F37024;   /* Laranja principal do PDF */
+    --retro-pink: #D85B97;     /* Rosa das ilustrações */
+    --retro-green: #A3D134;    /* Verde-limão das estrelas e mandalas */
+    --retro-dark: #222222;     /* Traço preto grosso para contornos */
     --white: #FFFFFF;
 }
 
+/* --- Reset & Rolagem Suave --- */
 * { margin: 0; padding: 0; box-sizing: border-box; }
 
 html { scroll-behavior: smooth; }
 
 body {
     font-family: 'Lato', Arial, sans-serif;
-    background-color: var(--bg-creme);
-    color: var(--text-dark);
+    background-color: var(--retro-cream);
+    color: var(--retro-dark);
     line-height: 1.6;
+    padding-bottom: 60px;
 }
 
-/* --- NAVBAR --- */
+/* --- ESTRELA RETRÔ (Elemento Chave do PDF) --- */
+.retro-star {
+    color: var(--retro-green);
+    font-size: 2.2rem;
+    display: inline-block;
+    font-family: 'Montserrat', sans-serif;
+    /* Efeito de contorno preto idêntico ao desenho do PDF */
+    text-shadow: 
+        -3px -3px 0 var(--retro-dark),  
+         3px -3px 0 var(--retro-dark),
+        -3px  3px 0 var(--retro-dark),
+         3px  3px 0 var(--retro-dark);
+    user-select: none;
+}
+
+/* --- NAVBAR SUPERIOR POP-ART --- */
 .navbar {
-    background-color: var(--text-dark);
-    padding: 20px 0;
+    background-color: var(--retro-dark);
+    padding: 15px 0;
     position: sticky;
     top: 0;
     z-index: 100;
-    border-bottom: 4px solid var(--retro-orange);
+    border-bottom: 5px solid var(--retro-orange);
 }
 
 .nav-links {
-    list-style: none; display: flex; justify-content: center; gap: 25px; flex-wrap: wrap;
+    list-style: none; display: flex; justify-content: center; gap: 30px; flex-wrap: wrap;
 }
 
 .nav-links a {
     color: var(--white); text-decoration: none;
-    font-family: 'Montserrat', sans-serif; font-weight: 800; font-size: 0.9rem;
-    transition: color 0.3s;
+    font-family: 'Montserrat', sans-serif; font-weight: 900; font-size: 0.85rem;
+    letter-spacing: 1px; transition: color 0.2s;
 }
 
 .nav-links a:hover { color: var(--retro-green); }
 
-/* --- HEADER (IDENTIDADE VISUAL) --- */
+/* --- HERO SECTION (Visual de Capa do Caderno/PDF) --- */
 .hero-section {
-    height: 60vh;
-    min-height: 400px;
-    background-color: var(--retro-orange); /* Pode colocar uma URL de imagem retro aqui */
-    background: linear-gradient(135deg, var(--retro-orange) 0%, var(--retro-pink) 100%);
+    height: 65vh;
+    min-height: 450px;
+    background-color: var(--retro-orange);
+    /* Ondas psicodélicas simuladas por gradientes circulares retrô */
+    background-image: radial-gradient(circle at 20% 30%, var(--retro-pink) 10%, transparent 60%), 
+                      radial-gradient(circle at 80% 70%, var(--retro-green) 10%, var(--retro-orange) 70%);
     display: flex;
     align-items: center;
     justify-content: center;
     text-align: center;
-    border-bottom: 8px solid var(--retro-green);
+    border-bottom: 8px solid var(--retro-dark);
 }
 
 .hero-title {
     font-family: 'Montserrat', sans-serif;
-    font-size: 4rem;
+    font-size: 4.5rem;
     font-weight: 900;
     color: var(--white);
-    line-height: 1.1;
-    text-shadow: 4px 4px 0px var(--text-dark);
+    line-height: 1.05;
+    letter-spacing: -2px;
+    text-shadow: 6px 6px 0px var(--retro-dark);
 }
 
 .hero-subtitle {
     font-family: 'Montserrat', sans-serif;
     color: var(--retro-green);
-    font-weight: 800;
-    font-size: 1.5rem;
-    margin-top: 10px;
-    background: var(--text-dark);
+    font-weight: 900;
+    font-size: 1.4rem;
+    margin-top: 15px;
+    background: var(--retro-dark);
     display: inline-block;
-    padding: 5px 15px;
-    border-radius: 20px;
+    padding: 6px 20px;
+    border-radius: 4px;
+    box-shadow: 4px 4px 0px var(--retro-pink);
 }
+
+.hero-stars { margin-top: 20px; display: flex; justify-content: center; gap: 20px; }
 
 /* --- CONTAINER PRINCIPAL --- */
 .container {
-    max-width: 1200px;
+    max-width: 1100px;
     margin: 0 auto;
-    padding: 40px 20px;
+    padding: 20px;
 }
 
-.section-title {
-    font-family: 'Montserrat', sans-serif;
-    font-size: 2rem;
-    color: var(--text-dark);
-    margin-bottom: 30px;
-    text-align: center;
-}
-
-.mt-spacing { margin-top: 60px; }
-
-/* --- BANNERS ESTILIZADOS --- */
+/* --- BANNERS ESTILIZADOS COM DIRETRIZES DO PDF --- */
 .banner {
-    padding: 30px;
-    border-radius: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+    padding: 25px;
+    border-radius: 12px;
     text-align: center;
-    margin: 40px 0 30px 0;
-    border: 4px solid var(--text-dark);
-    box-shadow: 6px 6px 0px var(--text-dark);
+    margin: 50px 0 35px 0;
+    border: 4px solid var(--retro-dark);
+    box-shadow: 8px 8px 0px var(--retro-dark);
 }
 
 .banner h2 {
@@ -107,123 +124,141 @@ body {
     font-size: 2.2rem;
     font-weight: 900;
     color: var(--white);
-    text-shadow: 2px 2px 0px var(--text-dark);
+    text-shadow: 3px 3px 0px var(--retro-dark);
+    letter-spacing: -1px;
 }
 
-.banner p {
+.banner-sub {
     font-family: 'Montserrat', sans-serif;
-    font-weight: 800;
-    font-size: 1.2rem;
-    color: var(--text-dark);
+    font-weight: 900;
+    font-size: 1.1rem;
+    color: var(--retro-dark);
+    margin-top: 2px;
 }
 
+.retro-banner-orange { background-color: var(--retro-orange); }
 .retro-banner-green { background-color: var(--retro-green); }
 .retro-banner-pink { background-color: var(--retro-pink); }
-.retro-banner-orange { background-color: var(--retro-orange); }
 
-/* --- BLOCOS EM FILEIRA COM SETAS (Cards 1-4 e 5-8) --- */
+/* --- ESTRUTURA SEQUENCIAL EM FILEIRA (DESENHO DO CADERNO) --- */
 .steps-row {
     display: flex;
     justify-content: space-between;
     align-items: stretch;
-    gap: 15px;
+    gap: 10px;
+    margin-bottom: 20px;
 }
 
 .step-card {
     flex: 1;
     background: var(--white);
-    border: 3px solid var(--text-dark);
+    border: 4px solid var(--retro-dark);
     border-radius: 12px;
-    padding: 20px;
+    padding: 25px 15px 20px 15px;
     position: relative;
-    box-shadow: 4px 4px 0px rgba(0,0,0,0.1);
+    box-shadow: 6px 6px 0px var(--retro-dark);
 }
 
+/* Círculos numerados suspensos do esboço */
 .step-number {
     position: absolute;
-    top: -15px; left: -15px;
-    background: var(--retro-orange);
-    color: var(--white);
+    top: -18px; left: 15px;
+    background: var(--retro-green);
+    color: var(--retro-dark);
     font-family: 'Montserrat', sans-serif;
     font-weight: 900;
-    width: 40px; height: 40px;
+    width: 36px; height: 36px;
     display: flex; align-items: center; justify-content: center;
     border-radius: 50%;
-    border: 3px solid var(--text-dark);
+    border: 3px solid var(--retro-dark);
+    box-shadow: 2px 2px 0px var(--retro-dark);
 }
 
 .step-card h3 {
     font-family: 'Montserrat', sans-serif;
     font-size: 1.1rem;
+    font-weight: 900;
     margin-bottom: 10px;
-    color: var(--retro-pink);
-    margin-top: 10px;
+    color: var(--retro-orange);
 }
 
-.step-card p { font-size: 0.9rem; }
+.step-card p { font-size: 0.9rem; color: #444; font-weight: 700; }
 
+/* Setas horizontais indicativas */
 .step-arrow {
     display: flex;
     align-items: center;
-    font-size: 2rem;
-    color: var(--retro-green);
-    font-weight: bold;
+    font-size: 1.8rem;
+    color: var(--retro-dark);
+    font-weight: 900;
+    user-select: none;
 }
 
-/* --- QUIZ --- */
-.quiz-desc { text-align: center; margin-bottom: 20px; font-weight: bold; }
+/* --- INTERATIVIDADE DO QUIZ --- */
+.quiz-desc { text-align: center; margin-bottom: 30px; font-weight: 700; font-size: 1.1rem; }
 
 .quiz-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 20px;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 25px;
 }
 
 .quiz-item {
     background: var(--white);
-    border: 3px solid var(--text-dark);
+    border: 4px solid var(--retro-dark);
     border-radius: 12px;
     padding: 25px;
     display: flex; flex-direction: column;
+    box-shadow: 6px 6px 0px var(--retro-dark);
 }
 
-.quiz-question { margin-bottom: 15px; font-weight: bold; }
+.quiz-question { margin-bottom: 20px; font-size: 1.05rem; line-height: 1.5; }
 
-.quiz-options { display: flex; gap: 10px; margin-top: auto; }
+.quiz-options { display: flex; gap: 15px; margin-top: auto; }
 
+/* Botões com efeito clique em bloco cartoon */
 .quiz-btn {
-    flex: 1; padding: 10px;
-    border: 2px solid var(--text-dark);
+    flex: 1; padding: 12px;
+    border: 3px solid var(--retro-dark);
     background: var(--white);
-    font-family: 'Montserrat', sans-serif; font-weight: bold;
-    border-radius: 8px; cursor: pointer; transition: 0.2s;
+    font-family: 'Montserrat', sans-serif; font-weight: 900;
+    font-size: 0.95rem; border-radius: 8px; cursor: pointer;
+    box-shadow: 3px 3px 0px var(--retro-dark);
+    transition: transform 0.1s, box-shadow 0.1s;
 }
 
-.quiz-btn:hover:not(:disabled) { background: var(--text-dark); color: var(--white); }
-.quiz-btn:disabled { opacity: 0.7; cursor: not-allowed; }
+.quiz-btn:hover:not(:disabled) {
+    background: var(--retro-cream);
+}
 
-.quiz-btn.correct { background: var(--retro-green); color: var(--text-dark); }
-.quiz-btn.wrong { background: var(--retro-pink); color: var(--white); }
+.quiz-btn:active:not(:disabled) {
+    transform: translate(3px, 3px);
+    box-shadow: 0px 0px 0px var(--retro-dark);
+}
+
+.quiz-btn:disabled { opacity: 0.6; cursor: not-allowed; }
+
+.quiz-btn.correct { background: var(--retro-green) !important; color: var(--retro-dark) !important; }
+.quiz-btn.wrong { background: var(--retro-pink) !important; color: var(--white) !important; }
 
 .quiz-feedback {
-    display: none; margin-top: 15px; padding: 15px;
-    background: var(--bg-creme); border-radius: 8px; border: 2px dashed var(--text-dark);
+    display: none; margin-top: 20px; padding: 15px;
+    background: var(--retro-cream); border-radius: 8px; 
+    border: 3px dashed var(--retro-dark);
 }
-.quiz-feedback.show { display: block; }
-.ans-result { font-weight: bold; margin-bottom: 5px; }
-.ans-result.acerto { color: var(--retro-green); }
-.ans-result.erro { color: var(--retro-pink); }
+.quiz-feedback.show { display: block; animation: popIn 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275); }
+.ans-result { font-weight: 900; margin-bottom: 5px; font-size: 1.1rem; }
 
-/* --- VÍDEOS --- */
+/* --- BLOCOS DE VÍDEO COMPACTOS --- */
 .video-wrapper {
     position: relative;
-    padding-bottom: 56.25%; /* Proporção 16:9 */
+    padding-bottom: 56.25%;
     height: 0;
-    border: 5px solid var(--text-dark);
+    border: 5px solid var(--retro-dark);
     border-radius: 12px;
     overflow: hidden;
-    background: #000;
-    box-shadow: 8px 8px 0px rgba(0,0,0,0.1);
+    box-shadow: 8px 8px 0px var(--retro-dark);
+    margin-bottom: 20px;
 }
 
 .video-wrapper iframe {
@@ -233,17 +268,11 @@ body {
 /* --- REFERÊNCIAS --- */
 .references-section {
     background: var(--white);
-    border: 4px solid var(--text-dark);
-    padding: 30px;
+    border: 4px solid var(--retro-dark);
+    padding: 35px;
     border-radius: 12px;
+    margin-top: 50px;
+    box-shadow: 6px 6px 0px var(--retro-dark);
 }
 
-.ref-list { padding-left: 20px; }
-.ref-list li { margin-bottom: 10px; font-size: 0.95rem; }
-
-/* --- RESPONSIVIDADE (Celular) --- */
-@media (max-width: 900px) {
-    .steps-row { flex-direction: column; align-items: stretch; }
-    .step-arrow { transform: rotate(90deg); justify-content: center; margin: 10px 0; }
-    .hero-title { font-size: 2.5rem; }
-}
+.references-section h2 { margin-bottom: 20 }

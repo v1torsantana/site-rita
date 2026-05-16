@@ -1,6 +1,6 @@
 document.addEventListener('DOMContentLoaded', () => {
     
-    // --- Lógica do Quiz Interativo ---
+    // --- Lógica Interativa do Quiz (Mitos e Verdades) ---
     const quizItems = document.querySelectorAll('.quiz-item');
 
     quizItems.forEach(item => {
@@ -13,29 +13,29 @@ document.addEventListener('DOMContentLoaded', () => {
             button.addEventListener('click', function() {
                 const userChoice = this.getAttribute('data-choice');
 
-                // Desativar botões após a primeira escolha
+                // Bloqueia cliques adicionais desativando os botões da pergunta
                 buttons.forEach(btn => btn.disabled = true);
 
-                // Verifica se acertou ou errou
+                // Tratamento de Acerto ou Erro
                 if (userChoice === correctAnswer) {
                     this.classList.add('correct');
-                    resultText.innerHTML = "✅ Correto! A resposta é " + correctAnswer.toUpperCase() + ".";
-                    resultText.style.color = "var(--retro-green)";
+                    resultText.innerHTML = "✅ Correto! É " + correctAnswer.toUpperCase() + ".";
+                    resultText.style.color = "var(--retro-dark)";
                 } else {
                     this.classList.add('wrong');
                     
-                    // Destaca a correta
+                    // Exibe a alternativa correta em verde para fins didáticos
                     buttons.forEach(btn => {
                         if(btn.getAttribute('data-choice') === correctAnswer) {
                             btn.classList.add('correct');
                         }
                     });
 
-                    resultText.innerHTML = "❌ Incorreto! A resposta é " + correctAnswer.toUpperCase() + ".";
+                    resultText.innerHTML = "❌ Incorreto! A resposta correta é " + correctAnswer.toUpperCase() + ".";
                     resultText.style.color = "var(--retro-pink)";
                 }
 
-                // Exibir explicação
+                // Revela dinamicamente a caixa explicativa do PDF
                 feedback.classList.add('show');
             });
         });
