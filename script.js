@@ -1,26 +1,6 @@
 document.addEventListener('DOMContentLoaded', () => {
     
-    // --- 1. Lógica do Accordion ---
-    const triggers = document.querySelectorAll('.accordion-trigger');
-
-    triggers.forEach(trigger => {
-        trigger.addEventListener('click', function() {
-            const icon = this.querySelector('.icon');
-            const content = this.nextElementSibling;
-
-            this.classList.toggle('active');
-
-            if (content.style.maxHeight) {
-                // Fechar
-                content.style.maxHeight = null;
-            } else {
-                // Abrir
-                content.style.maxHeight = content.scrollHeight + "px";
-            }
-        });
-    });
-
-    // --- 2. Lógica do Quiz Interativo ---
+    // --- Lógica do Quiz Interativo ---
     const quizItems = document.querySelectorAll('.quiz-item');
 
     quizItems.forEach(item => {
@@ -39,12 +19,12 @@ document.addEventListener('DOMContentLoaded', () => {
                 // Verifica se acertou ou errou
                 if (userChoice === correctAnswer) {
                     this.classList.add('correct');
-                    resultText.innerHTML = "✅ Correto! É " + correctAnswer.toUpperCase() + ".";
-                    resultText.className = "ans-result acerto";
+                    resultText.innerHTML = "✅ Correto! A resposta é " + correctAnswer.toUpperCase() + ".";
+                    resultText.style.color = "var(--retro-green)";
                 } else {
                     this.classList.add('wrong');
                     
-                    // Destacar qual era o botão certo para o usuário aprender
+                    // Destaca a correta
                     buttons.forEach(btn => {
                         if(btn.getAttribute('data-choice') === correctAnswer) {
                             btn.classList.add('correct');
@@ -52,10 +32,10 @@ document.addEventListener('DOMContentLoaded', () => {
                     });
 
                     resultText.innerHTML = "❌ Incorreto! A resposta é " + correctAnswer.toUpperCase() + ".";
-                    resultText.className = "ans-result erro";
+                    resultText.style.color = "var(--retro-pink)";
                 }
 
-                // Mostra a explicação
+                // Exibir explicação
                 feedback.classList.add('show');
             });
         });
