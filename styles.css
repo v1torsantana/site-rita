@@ -86,12 +86,14 @@ h1, h2, h3, h4 {
 .hero {
   min-height: 100vh;
   display: flex;
+  flex-direction: column;
   align-items: center;
   justify-content: center;
   text-align: center;
   position: relative;
   overflow: hidden;
   background: var(--orange);
+  padding: 80px 20px 40px;
 }
 
 .hero-bg {
@@ -111,17 +113,29 @@ h1, h2, h3, h4 {
 }
 
 .hero-content {
-  position: absolute;
-  bottom: 60px;
-  left: 50%;
-  transform: translateX(-50%);
+  position: relative;
   z-index: 3;
   text-align: center;
+  margin-top: -80px;
+}
+
+.hero-frame {
+  position: relative;
+  z-index: 1;
+  width: 100%;
+  max-width: 900px;
+  height: auto;
+  margin-top: 60px;
+}
+
+.hero-title {
+  max-width: 480px;
+  width: 80%;
+  height: auto;
+  margin-bottom: 20px;
 }
 
 .hero-logo {
-  position: relative;
-  z-index: 1;
   max-width: 700px;
   width: 90%;
   height: auto;
@@ -655,7 +669,10 @@ footer {
   .quiz-options { flex-direction: column; }
   .quiz-btn { width: 100%; }
   .about-strip p { font-size: .95rem; padding: 0 12px; }
-  .hero-logo { max-width: 280px; }
+  .hero-title { max-width: 280px; }
+  .hero-frame { max-width: 100%; margin-top: 30px; }
+  .hero-content { margin-top: -40px; }
   .section-img { max-width: 140px; }
+  .section-img-lg { max-width: 220px; }
   .play-img { width: 80px; }
 }
