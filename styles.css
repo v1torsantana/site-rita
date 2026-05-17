@@ -352,3 +352,70 @@ body::before {
   }
 
 }
+
+.internal-header {
+  min-height: 45vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  overflow: hidden;
+  background:
+    radial-gradient(circle at top left, rgba(255,255,255,.15), transparent 30%),
+    linear-gradient(135deg, #EB6E2F, #ff884d);
+}
+
+.internal-header h1 {
+  position: relative;
+  z-index: 3;
+  font-family: 'Shrikhand', cursive;
+  font-size: 5rem;
+  color: white;
+  text-shadow: 6px 6px 0 black;
+}
+
+.internal-bg {
+  position: absolute;
+  inset: 0;
+  background:
+    radial-gradient(circle, rgba(255,255,255,.08), transparent 60%);
+}
+
+.small-eye {
+  width: 120px;
+  top: 40px;
+  left: 60px;
+}
+
+.small-flower {
+  width: 160px;
+  bottom: -10px;
+  right: 40px;
+}
+
+.psychedelic-card {
+  position: relative;
+  overflow: hidden;
+}
+
+.psychedelic-card::before {
+  content: "";
+  position: absolute;
+  width: 400px;
+  height: 400px;
+  background:
+    radial-gradient(circle, rgba(217,145,210,.25), transparent 70%);
+  top: -120px;
+  right: -120px;
+}
+
+.quiz-question {
+  font-weight: 900;
+  font-size: 1.1rem;
+  margin-bottom: 15px;
+}
+
+.quiz-options {
+  display: flex;
+  gap: 10px;
+}
