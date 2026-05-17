@@ -6,154 +6,170 @@
   <title>Viagem Transcendental</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Shrikhand&family=Montserrat:wght@400;500;600;700;900&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;900&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
 
+<nav class="navbar">
+  <div class="nav-container">
+    <a href="#" class="nav-logo">Viagem Transcendental</a>
+    <ul class="nav-links">
+      <li><a href="#temas">Temas</a></li>
+      <li><a href="#videos">Vídeos</a></li>
+      <li><a href="#noticias">Notícias</a></li>
+      <li><a href="#referencias">Referências</a></li>
+    </ul>
+  </div>
+</nav>
+
 <header class="hero">
-  <div class="hero-overlay"></div>
+  <div class="hero-bg"></div>
+  <img src="assets/olho.png" alt="" class="hero-float hero-eye">
+  <img src="assets/flores.png" alt="" class="hero-float hero-flower-l">
+  <img src="assets/flores.png" alt="" class="hero-float hero-flower-r">
+  <img src="assets/camera.png" alt="" class="hero-float hero-camera">
   <div class="hero-content">
-    <h1>Viagem<br>Transcendental</h1>
-    <p class="hero-subtitle">Conhecimento psicodélico</p>
-    <a href="#sobre" class="hero-btn">Explorar</a>
+    <h1>Viagem Transcendental</h1>
+    <p class="hero-tagline">Conhecimento Psicodélico</p>
+    <a href="#temas" class="hero-btn">Explorar conteúdo ↓</a>
   </div>
 </header>
 
-<main>
-
-<section id="sobre" class="intro-section">
+<section class="about-strip">
   <div class="container">
-    <h2>Sobre o Projeto</h2>
-    <p>A ayahuasca é uma bebida psicoativa tradicionalmente utilizada por povos indígenas da região amazônica há séculos, estando associada a práticas espirituais, culturais e ritualísticas. Nas últimas décadas, seu uso passou a despertar maior interesse científico e social, principalmente devido aos seus efeitos no sistema nervoso central, possíveis aplicações terapêuticas e riscos relacionados ao consumo inadequado.</p>
-    <p>Este site foi desenvolvido com o objetivo de reunir informações científicas, toxicológicas e sociais sobre a ayahuasca de forma acessível e organizada. O conteúdo aborda desde sua origem histórica e composição química até seus mecanismos de ação no organismo, efeitos tóxicos, riscos à saúde, métodos de análise laboratorial e discussões sobre prevenção e redução de danos.</p>
-    <p>Além disso, o site busca promover uma compreensão crítica sobre o tema, diferenciando informações baseadas em evidências científicas de mitos frequentemente disseminados sobre a substância. Dessa forma, pretende contribuir para a educação em saúde, para a conscientização da população e para o debate responsável sobre o uso da ayahuasca em contextos religiosos, terapêuticos e recreativos.</p>
-    <p>Todo o conteúdo apresentado foi estruturado a partir de referências científicas e materiais acadêmicos da área da toxicologia, farmacologia e saúde pública, priorizando linguagem clara sem deixar de lado o rigor científico necessário ao tema.</p>
+    <p>A ayahuasca é uma bebida psicoativa tradicionalmente utilizada por povos indígenas da região amazônica há séculos. Este site reúne informações científicas, toxicológicas e sociais de forma acessível — diferenciando evidências de mitos e contribuindo para a educação em saúde e o debate responsável.</p>
   </div>
 </section>
 
-<section class="topics-section">
+<section id="temas" class="topics-section">
   <div class="container">
-    <h2>Temas</h2>
+    <div class="section-header">
+      <h2>O que você precisa saber</h2>
+      <p>Explore cada tema e teste seus conhecimentos</p>
+    </div>
     <div class="topics-grid">
 
-      <div class="topic-card">
-        <span class="topic-number">01</span>
+      <a href="topico1.html" class="topic-card">
+        <span class="topic-num">01</span>
         <h3>Conhecendo a Ayahuasca</h3>
-        <p>Apresentação introdutória da ayahuasca: sua origem, composição, contexto cultural e classificação como substância de interesse toxicológico, farmacológico e social.</p>
-        <a href="topico1.html" class="btn-saiba-mais">Saiba mais</a>
-      </div>
+        <p>Origem, composição, contexto cultural e classificação.</p>
+        <span class="card-arrow">→</span>
+      </a>
 
-      <div class="topic-card">
-        <span class="topic-number">02</span>
-        <h3>Como a Ayahuasca Age no Organismo</h3>
-        <p>Mecanismos biológicos envolvidos após o consumo: absorção, distribuição, metabolismo, eliminação e efeitos no sistema nervoso e outros órgãos.</p>
-        <a href="topico2.html" class="btn-saiba-mais">Saiba mais</a>
-      </div>
+      <a href="topico2.html" class="topic-card">
+        <span class="topic-num">02</span>
+        <h3>Ação no Organismo</h3>
+        <p>Absorção, metabolismo, efeitos no sistema nervoso.</p>
+        <span class="card-arrow">→</span>
+      </a>
 
-      <div class="topic-card">
-        <span class="topic-number">03</span>
-        <h3>Perfil de Uso e Contextos Sociais</h3>
-        <p>Quem utiliza a ayahuasca, em quais contextos ela é consumida e quais fatores sociais, culturais e psicológicos estão relacionados ao uso.</p>
-        <a href="topico3.html" class="btn-saiba-mais">Saiba mais</a>
-      </div>
+      <a href="topico3.html" class="topic-card">
+        <span class="topic-num">03</span>
+        <h3>Perfil de Uso e Contextos</h3>
+        <p>Quem usa, onde e por quê — fatores sociais e culturais.</p>
+        <span class="card-arrow">→</span>
+      </a>
 
-      <div class="topic-card">
-        <span class="topic-number">04</span>
+      <a href="topico4.html" class="topic-card">
+        <span class="topic-num">04</span>
         <h3>Riscos e Efeitos Tóxicos</h3>
-        <p>Possíveis riscos relacionados ao consumo: efeitos imediatos, consequências do uso prolongado e possíveis complicações clínicas e psicológicas.</p>
-        <a href="topico4.html" class="btn-saiba-mais">Saiba mais</a>
-      </div>
+        <p>Efeitos adversos, interações e complicações clínicas.</p>
+        <span class="card-arrow">→</span>
+      </a>
 
-      <div class="topic-card">
-        <span class="topic-number">05</span>
-        <h3>Dependência, Tolerância e Abstinência</h3>
-        <p>Potencial de dependência da ayahuasca, efeitos do uso repetitivo, diferenças entre dependência física e psicológica e evidências científicas atuais.</p>
-        <a href="topico5.html" class="btn-saiba-mais">Saiba mais</a>
-      </div>
+      <a href="topico5.html" class="topic-card">
+        <span class="topic-num">05</span>
+        <h3>Dependência e Tolerância</h3>
+        <p>Potencial de dependência, abstinência e uso repetitivo.</p>
+        <span class="card-arrow">→</span>
+      </a>
 
-      <div class="topic-card">
-        <span class="topic-number">06</span>
-        <h3>Diagnóstico e Métodos de Análise</h3>
-        <p>Principais métodos laboratoriais e clínicos utilizados para identificar o uso da ayahuasca e avaliar seus efeitos no organismo.</p>
-        <a href="topico6.html" class="btn-saiba-mais">Saiba mais</a>
-      </div>
+      <a href="topico6.html" class="topic-card">
+        <span class="topic-num">06</span>
+        <h3>Diagnóstico e Análise</h3>
+        <p>Métodos laboratoriais e clínicos de detecção.</p>
+        <span class="card-arrow">→</span>
+      </a>
 
-      <div class="topic-card">
-        <span class="topic-number">07</span>
-        <h3>Prevenção, Redução de Danos e Saúde Pública</h3>
-        <p>Estratégias voltadas à prevenção de riscos e redução de danos, além de políticas públicas e debates sociais sobre o tema.</p>
-        <a href="topico7.html" class="btn-saiba-mais">Saiba mais</a>
-      </div>
+      <a href="topico7.html" class="topic-card">
+        <span class="topic-num">07</span>
+        <h3>Prevenção e Redução de Danos</h3>
+        <p>Estratégias de proteção e políticas públicas.</p>
+        <span class="card-arrow">→</span>
+      </a>
 
-      <div class="topic-card">
-        <span class="topic-number">08</span>
+      <a href="topico8.html" class="topic-card">
+        <span class="topic-num">08</span>
         <h3>Mitos e Verdades</h3>
-        <p>Jogo interativo sobre informações populares da ayahuasca, diferenciando crenças, exageros e dados cientificamente comprovados.</p>
-        <a href="topico8.html" class="btn-saiba-mais">Saiba mais</a>
-      </div>
+        <p>Jogo interativo: separe fatos de ficção.</p>
+        <span class="card-arrow">→</span>
+      </a>
 
     </div>
   </div>
 </section>
 
-<section class="media-section">
+<section id="videos" class="videos-section">
   <div class="container">
-    <h2>Vídeos</h2>
+    <div class="section-header">
+      <h2>Vídeos e Entrevistas</h2>
+    </div>
     <div class="video-grid">
       <div class="video-card">
-        <h3>🎬 Vídeo Explicativo</h3>
         <div class="video-wrapper">
-          <iframe src="https://www.youtube.com/embed/dQw4w9WgXcQ" allowfullscreen title="Vídeo explicativo sobre ayahuasca"></iframe>
+          <iframe src="https://www.youtube.com/embed/dQw4w9WgXcQ" allowfullscreen title="Vídeo explicativo"></iframe>
         </div>
+        <h3>🎬 Vídeo Explicativo</h3>
       </div>
       <div class="video-card">
-        <h3>🎤 Entrevista</h3>
         <div class="video-wrapper">
-          <iframe src="https://www.youtube.com/embed/dQw4w9WgXcQ" allowfullscreen title="Entrevista sobre ayahuasca"></iframe>
+          <iframe src="https://www.youtube.com/embed/dQw4w9WgXcQ" allowfullscreen title="Entrevista"></iframe>
         </div>
+        <h3>🎤 Entrevista Especial</h3>
       </div>
     </div>
   </div>
 </section>
 
-<section class="news-section">
+<section id="noticias" class="news-section">
   <div class="container">
-    <h2>Notícias sobre Ayahuasca</h2>
+    <div class="section-header">
+      <h2>Notícias</h2>
+    </div>
     <div class="news-grid">
       <div class="news-card">
         <span class="news-tag">Pesquisa</span>
         <h4>Pesquisas Terapêuticas</h4>
-        <p>Pesquisas recentes investigam os efeitos da ayahuasca no tratamento de depressão resistente a medicamentos convencionais.</p>
+        <p>Estudos investigam efeitos da ayahuasca em depressão resistente a medicamentos convencionais.</p>
       </div>
       <div class="news-card">
         <span class="news-tag">Saúde</span>
         <h4>Segurança e Interações</h4>
-        <p>Especialistas reforçam os riscos da combinação da ayahuasca com antidepressivos e outros medicamentos.</p>
+        <p>Especialistas alertam sobre riscos da combinação com antidepressivos e outros medicamentos.</p>
       </div>
       <div class="news-card">
         <span class="news-tag">Cultura</span>
         <h4>Uso Tradicional</h4>
-        <p>Povos amazônicos preservam práticas espirituais e culturais ancestrais ligadas ao uso ritualístico da ayahuasca.</p>
+        <p>Povos amazônicos preservam práticas espirituais e culturais ancestrais ligadas à ayahuasca.</p>
       </div>
     </div>
   </div>
 </section>
 
-<section class="references-section">
+<section id="referencias" class="references-section">
   <div class="container">
-    <h2>Referências Científicas</h2>
-    <ul>
-      <li>CONAD — Regulamentação do uso religioso da ayahuasca no Brasil.</li>
-      <li>Estudos sobre toxicologia do DMT e inibidores da MAO.</li>
-      <li>Pesquisas sobre psicodélicos e saúde mental (PubMed).</li>
-      <li>Artigos acadêmicos sobre redução de danos e políticas públicas.</li>
-      <li>Materiais da área de farmacologia e saúde pública.</li>
-    </ul>
+    <div class="section-header light">
+      <h2>Referências Científicas</h2>
+    </div>
+    <div class="ref-grid">
+      <div class="ref-item">CONAD — Regulamentação do uso religioso da ayahuasca no Brasil</div>
+      <div class="ref-item">Estudos sobre toxicologia do DMT e inibidores da MAO</div>
+      <div class="ref-item">Pesquisas sobre psicodélicos e saúde mental (PubMed)</div>
+      <div class="ref-item">Artigos acadêmicos sobre redução de danos e políticas públicas</div>
+    </div>
   </div>
 </section>
-
-</main>
 
 <footer>
   <div class="container">
