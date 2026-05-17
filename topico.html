@@ -1,75 +1,81 @@
 <!DOCTYPE html>
-<html lang="pt-BR">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Saiba Mais | Viagem Transcendental</title>
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500;700;900&family=Shrikhand&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="styles.css">
-</head>
-<body class="detalhes-body">
 
-    <header class="saber-mais-header">
-        <h1 class="hero-title">PARA SABER MAIS</h1>
-    </header>
+<section class="content-card">
 
-    <main class="container">
-        
-        <section class="full-content-card">
-            <h2>Informação Científica e Consciência</h2>
-            <p><strong>Aprofundando os conhecimentos:</strong> A ayahuasca é uma bebida tradicional amazônica, preparada a partir da cocção do cipó <em>Banisteriopsis caapi</em> e das folhas do arbusto <em>Psychotria viridis</em>. Historicamente utilizada pelos povos indígenas, hoje é foco de extensas pesquisas.</p>
-            <p>Seus efeitos combinam a inibição da enzima MAO (presente no cipó) com a ativação de receptores serotoninérgicos pelo DMT (presente na folha). O resultado são intensas experiências de introspecção, mas que exigem extrema cautela quando misturadas com medicações psiquiátricas.</p>
-        </section>
+<h2>O que é Ayahuasca?</h2>
 
-        <section class="quiz-container mt-spacing">
-            <div class="banner retro-banner-pink">
-                <h2>MITOS E VERDADES</h2>
-                <p class="banner-sub">VAMOS JOGAR?</p>
-            </div>
+<p>
+A ayahuasca é uma bebida amazônica utilizada tradicionalmente em rituais espirituais e religiosos.
+</p>
 
-            <p class="quiz-desc">Selecione "Verdade" ou "Mito" para descobrir a resposta.</p>
-            
-            <div class="quiz-grid">
-                <div class="quiz-item" data-answer="mito">
-                    <p class="quiz-question"><strong>A ayahuasca sempre provoca alucinações visuais intensas?</strong></p>
-                    <div class="quiz-options">
-                        <button class="quiz-btn" data-choice="verdade">Verdade</button>
-                        <button class="quiz-btn" data-choice="mito">Mito</button>
-                    </div>
-                    <div class="quiz-feedback"><p class="ans-result"></p><p class="desc">Os efeitos variam. Algumas pessoas têm visões, outras experimentam principalmente introspecção profunda.</p></div>
-                </div>
+<p>
+Sua composição combina substâncias que alteram a atividade serotoninérgica do cérebro.
+</p>
 
-                <div class="quiz-item" data-answer="verdade">
-                    <p class="quiz-question"><strong>O ambiente de consumo pode influenciar a experiência?</strong></p>
-                    <div class="quiz-options">
-                        <button class="quiz-btn" data-choice="verdade">Verdade</button>
-                        <button class="quiz-btn" data-choice="mito">Mito</button>
-                    </div>
-                    <div class="quiz-feedback"><p class="ans-result"></p><p class="desc">Sim! O chamado "set e setting" influencia significativamente os efeitos psicológicos da experiência.</p></div>
-                </div>
+<p>
+A mistura pode provocar introspecção intensa, alterações emocionais e experiências perceptivas profundas.
+</p>
 
-                <div class="quiz-item" data-answer="verdade">
-                    <p class="quiz-question"><strong>Ela pode interagir perigosamente com antidepressivos?</strong></p>
-                    <div class="quiz-options">
-                        <button class="quiz-btn" data-choice="verdade">Verdade</button>
-                        <button class="quiz-btn" data-choice="mito">Mito</button>
-                    </div>
-                    <div class="quiz-feedback"><p class="ans-result"></p><p class="desc">Especialmente com medicamentos serotoninérgicos, podendo causar a grave síndrome serotoninérgica.</p></div>
-                </div>
+</section>
 
-                <div class="quiz-item" data-answer="mito">
-                    <p class="quiz-question"><strong>O uso de ayahuasca é permitido em qualquer contexto no Brasil?</strong></p>
-                    <div class="quiz-options">
-                        <button class="quiz-btn" data-choice="verdade">Verdade</button>
-                        <button class="quiz-btn" data-choice="mito">Mito</button>
-                    </div>
-                    <div class="quiz-feedback"><p class="ans-result"></p><p class="desc">Não. No Brasil, o uso é permitido exclusivamente em contextos religiosos específicos (CONAD).</p></div>
-                </div>
-            </div>
-        </section>
+<section class="quiz-section">
 
-    </main>
+<div class="banner">
+<h2>MITOS E VERDADES</h2>
+</div>
 
-    <script src="script.js"></script>
+<div class="quiz-grid">
+
+<div class="quiz-item" data-answer="verdade">
+<p>O ambiente influencia a experiência?</p>
+
+<div class="quiz-options">
+<button class="quiz-btn" data-choice="verdade">VERDADE</button>
+<button class="quiz-btn" data-choice="mito">MITO</button>
+</div>
+
+<div class="quiz-feedback">
+<p class="ans-result"></p>
+<p>
+Sim. O chamado “set e setting” influencia diretamente os efeitos psicológicos.
+</p>
+</div>
+
+</div>
+
+<div class="quiz-item" data-answer="mito">
+<p>Ayahuasca é segura com antidepressivos?</p>
+
+<div class="quiz-options">
+<button class="quiz-btn" data-choice="verdade">VERDADE</button>
+<button class="quiz-btn" data-choice="mito">MITO</button>
+</div>
+
+<div class="quiz-feedback">
+<p class="ans-result"></p>
+<p>
+A combinação pode causar síndrome serotoninérgica grave.
+</p>
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+<section class="references">
+<h2>REFERÊNCIAS</h2>
+<ul>
+<li>CONAD</li>
+<li>PubMed</li>
+<li>Artigos de toxicologia</li>
+</ul>
+</section>
+
+</main>
+
+<script src="script.js"></script>
+
 </body>
 </html>
