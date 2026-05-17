@@ -36,4 +36,17 @@ document.addEventListener('DOMContentLoaded', () => {
       document.getElementById('panel-' + target).classList.add('active');
     });
   });
+
+  // Play button - scroll to first video and autoplay
+  const playBtn = document.getElementById('play-btn');
+  if (playBtn) {
+    playBtn.addEventListener('click', () => {
+      const iframe = document.querySelector('.video-wrapper iframe');
+      if (iframe) {
+        const src = iframe.src;
+        iframe.src = src.includes('?') ? src + '&autoplay=1' : src + '?autoplay=1';
+        iframe.scrollIntoView({ behavior: 'smooth', block: 'center' });
+      }
+    });
+  }
 });
