@@ -1,4 +1,5 @@
 document.addEventListener('DOMContentLoaded', () => {
+  // Quiz validation
   document.querySelectorAll('.quiz-item').forEach(item => {
     const buttons = item.querySelectorAll('.quiz-btn');
     const feedback = item.querySelector('.quiz-feedback');
@@ -8,9 +9,7 @@ document.addEventListener('DOMContentLoaded', () => {
     buttons.forEach(btn => {
       btn.addEventListener('click', () => {
         buttons.forEach(b => b.disabled = true);
-        const choice = btn.dataset.choice;
-
-        if (choice === correct) {
+        if (btn.dataset.choice === correct) {
           btn.classList.add('correct');
           result.textContent = '✅ Correto!';
           result.style.color = '#155724';
@@ -24,6 +23,17 @@ document.addEventListener('DOMContentLoaded', () => {
         }
         feedback.classList.add('show');
       });
+    });
+  });
+
+  // Tab switching
+  document.querySelectorAll('.quiz-tab').forEach(tab => {
+    tab.addEventListener('click', () => {
+      const target = tab.dataset.tab;
+      document.querySelectorAll('.quiz-tab').forEach(t => t.classList.remove('active'));
+      document.querySelectorAll('.quiz-panel').forEach(p => p.classList.remove('active'));
+      tab.classList.add('active');
+      document.getElementById('panel-' + target).classList.add('active');
     });
   });
 });
