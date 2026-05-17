@@ -1,6 +1,5 @@
 document.addEventListener('DOMContentLoaded', () => {
     
-    // --- Lógica Interativa do Quiz (Mitos e Verdades) ---
     const quizItems = document.querySelectorAll('.quiz-item');
 
     quizItems.forEach(item => {
@@ -13,29 +12,28 @@ document.addEventListener('DOMContentLoaded', () => {
             button.addEventListener('click', function() {
                 const userChoice = this.getAttribute('data-choice');
 
-                // Bloqueia cliques adicionais desativando os botões da pergunta
+                // Trava os botões
                 buttons.forEach(btn => btn.disabled = true);
 
-                // Tratamento de Acerto ou Erro
                 if (userChoice === correctAnswer) {
                     this.classList.add('correct');
-                    resultText.innerHTML = "✅ Correto! É " + correctAnswer.toUpperCase() + ".";
-                    resultText.style.color = "var(--retro-dark)";
+                    resultText.innerHTML = "✅ ACERTOU! É " + correctAnswer.toUpperCase() + ".";
+                    resultText.style.color = "var(--retro-green)";
                 } else {
                     this.classList.add('wrong');
                     
-                    // Exibe a alternativa correta em verde para fins didáticos
+                    // Mostra o botão correto em verde
                     buttons.forEach(btn => {
                         if(btn.getAttribute('data-choice') === correctAnswer) {
                             btn.classList.add('correct');
                         }
                     });
 
-                    resultText.innerHTML = "❌ Incorreto! A resposta correta é " + correctAnswer.toUpperCase() + ".";
+                    resultText.innerHTML = "❌ ERROU! O correto é " + correctAnswer.toUpperCase() + ".";
                     resultText.style.color = "var(--retro-pink)";
                 }
 
-                // Revela dinamicamente a caixa explicativa do PDF
+                // Mostra a explicação
                 feedback.classList.add('show');
             });
         });

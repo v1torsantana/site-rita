@@ -1,278 +1,288 @@
-/* --- Paleta de Cores e Estilo Retrô Psicodélico (Inspirado no PDF) --- */
+/* --- PALETA DE CORES (Baseada nas imagens enviadas) --- */
 :root {
-    --retro-cream: #FFF5EB;    /* Fundo creme quente anos 70 */
-    --retro-orange: #F37024;   /* Laranja principal do PDF */
-    --retro-pink: #D85B97;     /* Rosa das ilustrações */
-    --retro-green: #A3D134;    /* Verde-limão das estrelas e mandalas */
-    --retro-dark: #222222;     /* Traço preto grosso para contornos */
+    --bg-orange: #E66127;     /* Fundo Laranja Vibrante das imagens */
+    --retro-green: #2B6B39;   /* Verde escuro das folhas */
+    --retro-lime: #A3D134;    /* Verde limão claro */
+    --retro-pink: #D85B97;    /* Rosa das decorações */
+    --retro-cream: #FFF4E0;   /* Creme para o fundo dos cartões */
+    --retro-dark: #1A1A1A;    /* Preto intenso para bordas */
     --white: #FFFFFF;
 }
 
-/* --- Reset & Rolagem Suave --- */
 * { margin: 0; padding: 0; box-sizing: border-box; }
 
-html { scroll-behavior: smooth; }
-
 body {
-    font-family: 'Lato', Arial, sans-serif;
-    background-color: var(--retro-cream);
+    font-family: 'Montserrat', Arial, sans-serif;
+    background-color: var(--bg-orange); /* O fundo inteiro é laranja */
     color: var(--retro-dark);
     line-height: 1.6;
     padding-bottom: 60px;
 }
 
-/* --- ESTRELA RETRÔ (Elemento Chave do PDF) --- */
-.retro-star {
-    color: var(--retro-green);
-    font-size: 2.2rem;
-    display: inline-block;
-    font-family: 'Montserrat', sans-serif;
-    /* Efeito de contorno preto idêntico ao desenho do PDF */
-    text-shadow: 
-        -3px -3px 0 var(--retro-dark),  
-         3px -3px 0 var(--retro-dark),
-        -3px  3px 0 var(--retro-dark),
-         3px  3px 0 var(--retro-dark);
-    user-select: none;
+/* --- ESTILO DOS TÍTULOS (Fonte Shrikhand Anos 70) --- */
+.hero-title, .section-title, .banner h2 {
+    font-family: 'Shrikhand', cursive;
+    letter-spacing: 2px;
+    text-transform: uppercase;
 }
 
-/* --- NAVBAR SUPERIOR POP-ART --- */
-.navbar {
-    background-color: var(--retro-dark);
-    padding: 15px 0;
-    position: sticky;
-    top: 0;
-    z-index: 100;
-    border-bottom: 5px solid var(--retro-orange);
-}
-
-.nav-links {
-    list-style: none; display: flex; justify-content: center; gap: 30px; flex-wrap: wrap;
-}
-
-.nav-links a {
-    color: var(--white); text-decoration: none;
-    font-family: 'Montserrat', sans-serif; font-weight: 900; font-size: 0.85rem;
-    letter-spacing: 1px; transition: color 0.2s;
-}
-
-.nav-links a:hover { color: var(--retro-green); }
-
-/* --- HERO SECTION (Visual de Capa do Caderno/PDF) --- */
+/* --- HERO SECTION --- */
 .hero-section {
-    height: 65vh;
-    min-height: 450px;
-    background-color: var(--retro-orange);
-    /* Ondas psicodélicas simuladas por gradientes circulares retrô */
-    background-image: radial-gradient(circle at 20% 30%, var(--retro-pink) 10%, transparent 60%), 
-                      radial-gradient(circle at 80% 70%, var(--retro-green) 10%, var(--retro-orange) 70%);
+    padding: 80px 20px;
+    text-align: center;
     display: flex;
+    flex-direction: column;
     align-items: center;
     justify-content: center;
-    text-align: center;
-    border-bottom: 8px solid var(--retro-dark);
 }
 
 .hero-title {
-    font-family: 'Montserrat', sans-serif;
-    font-size: 4.5rem;
-    font-weight: 900;
+    font-size: 5rem;
     color: var(--white);
-    line-height: 1.05;
-    letter-spacing: -2px;
-    text-shadow: 6px 6px 0px var(--retro-dark);
+    line-height: 1.1;
+    /* Sombras grossas simulando o texto da imagem "VIAGEM TRANSCENDENTAL" */
+    text-shadow: 4px 4px 0px var(--retro-dark), -2px -2px 0px var(--retro-dark), 2px -2px 0px var(--retro-dark), -2px 2px 0px var(--retro-dark);
 }
 
 .hero-subtitle {
-    font-family: 'Montserrat', sans-serif;
-    color: var(--retro-green);
+    font-size: 1.5rem;
     font-weight: 900;
-    font-size: 1.4rem;
-    margin-top: 15px;
-    background: var(--retro-dark);
-    display: inline-block;
-    padding: 6px 20px;
-    border-radius: 4px;
-    box-shadow: 4px 4px 0px var(--retro-pink);
+    color: var(--retro-lime);
+    margin-top: 10px;
+    background-color: var(--retro-dark);
+    padding: 5px 20px;
+    border-radius: 50px;
+    letter-spacing: 2px;
 }
 
-.hero-stars { margin-top: 20px; display: flex; justify-content: center; gap: 20px; }
-
-/* --- CONTAINER PRINCIPAL --- */
-.container {
-    max-width: 1100px;
-    margin: 0 auto;
-    padding: 20px;
-}
-
-/* --- BANNERS ESTILIZADOS COM DIRETRIZES DO PDF --- */
-.banner {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 20px;
-    padding: 25px;
-    border-radius: 12px;
+/* --- HEADER DA ABA "SAIBA MAIS" --- */
+.saber-mais-header {
+    background-color: var(--retro-green);
+    padding: 60px 20px;
     text-align: center;
-    margin: 50px 0 35px 0;
-    border: 4px solid var(--retro-dark);
-    box-shadow: 8px 8px 0px var(--retro-dark);
+    border-bottom: 8px solid var(--retro-dark);
+    margin-bottom: 40px;
 }
 
-.banner h2 {
-    font-family: 'Montserrat', sans-serif;
-    font-size: 2.2rem;
-    font-weight: 900;
+/* --- LAYOUT GERAL --- */
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.section-title {
+    font-size: 2.8rem;
     color: var(--white);
+    text-align: center;
+    margin-bottom: 40px;
     text-shadow: 3px 3px 0px var(--retro-dark);
-    letter-spacing: -1px;
 }
 
-.banner-sub {
-    font-family: 'Montserrat', sans-serif;
-    font-weight: 900;
-    font-size: 1.1rem;
-    color: var(--retro-dark);
-    margin-top: 2px;
-}
+.retro-title-pink { color: var(--retro-pink); }
+.retro-title-green { color: var(--retro-lime); }
 
-.retro-banner-orange { background-color: var(--retro-orange); }
-.retro-banner-green { background-color: var(--retro-green); }
-.retro-banner-pink { background-color: var(--retro-pink); }
+.mt-spacing { margin-top: 80px; }
 
-/* --- ESTRUTURA SEQUENCIAL EM FILEIRA (DESENHO DO CADERNO) --- */
-.steps-row {
-    display: flex;
-    justify-content: space-between;
-    align-items: stretch;
-    gap: 10px;
-    margin-bottom: 20px;
-}
-
-.step-card {
-    flex: 1;
-    background: var(--white);
-    border: 4px solid var(--retro-dark);
-    border-radius: 12px;
-    padding: 25px 15px 20px 15px;
-    position: relative;
-    box-shadow: 6px 6px 0px var(--retro-dark);
-}
-
-/* Círculos numerados suspensos do esboço */
-.step-number {
-    position: absolute;
-    top: -18px; left: 15px;
-    background: var(--retro-green);
-    color: var(--retro-dark);
-    font-family: 'Montserrat', sans-serif;
-    font-weight: 900;
-    width: 36px; height: 36px;
-    display: flex; align-items: center; justify-content: center;
-    border-radius: 50%;
-    border: 3px solid var(--retro-dark);
-    box-shadow: 2px 2px 0px var(--retro-dark);
-}
-
-.step-card h3 {
-    font-family: 'Montserrat', sans-serif;
-    font-size: 1.1rem;
-    font-weight: 900;
-    margin-bottom: 10px;
-    color: var(--retro-orange);
-}
-
-.step-card p { font-size: 0.9rem; color: #444; font-weight: 700; }
-
-/* Setas horizontais indicativas */
-.step-arrow {
-    display: flex;
-    align-items: center;
-    font-size: 1.8rem;
-    color: var(--retro-dark);
-    font-weight: 900;
-    user-select: none;
-}
-
-/* --- INTERATIVIDADE DO QUIZ --- */
-.quiz-desc { text-align: center; margin-bottom: 30px; font-weight: 700; font-size: 1.1rem; }
-
-.quiz-grid {
+/* --- GRID DE TÓPICOS --- */
+.topics-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
     gap: 25px;
 }
 
-.quiz-item {
-    background: var(--white);
-    border: 4px solid var(--retro-dark);
-    border-radius: 12px;
+.topic-card {
+    background-color: var(--retro-cream);
+    border: 5px solid var(--retro-dark);
+    border-radius: 15px;
     padding: 25px;
-    display: flex; flex-direction: column;
-    box-shadow: 6px 6px 0px var(--retro-dark);
+    display: flex;
+    flex-direction: column;
+    /* Sombra pop-art sólida */
+    box-shadow: 8px 8px 0px var(--retro-dark);
+    transition: transform 0.2s;
 }
 
-.quiz-question { margin-bottom: 20px; font-size: 1.05rem; line-height: 1.5; }
+.topic-card h3 {
+    font-family: 'Shrikhand', cursive;
+    color: var(--retro-green);
+    font-size: 1.3rem;
+    margin-bottom: 10px;
+}
 
-.quiz-options { display: flex; gap: 15px; margin-top: auto; }
+.topic-card p {
+    font-weight: 600;
+    margin-bottom: 25px;
+}
 
-/* Botões com efeito clique em bloco cartoon */
-.quiz-btn {
-    flex: 1; padding: 12px;
+/* --- BOTÃO "SAIBA MAIS" --- */
+.btn-saiba-mais {
+    margin-top: auto;
+    display: block;
+    text-align: center;
+    background-color: var(--retro-pink);
+    color: var(--white);
+    text-decoration: none;
+    font-weight: 900;
+    padding: 12px;
     border: 3px solid var(--retro-dark);
-    background: var(--white);
-    font-family: 'Montserrat', sans-serif; font-weight: 900;
-    font-size: 0.95rem; border-radius: 8px; cursor: pointer;
-    box-shadow: 3px 3px 0px var(--retro-dark);
-    transition: transform 0.1s, box-shadow 0.1s;
+    border-radius: 8px;
+    box-shadow: 4px 4px 0px var(--retro-dark);
+    transition: all 0.1s;
 }
 
-.quiz-btn:hover:not(:disabled) {
-    background: var(--retro-cream);
+.btn-saiba-mais:hover { background-color: var(--retro-lime); color: var(--retro-dark); }
+.btn-saiba-mais:active { transform: translate(4px, 4px); box-shadow: 0px 0px 0px var(--retro-dark); }
+
+/* --- SEÇÃO DE VÍDEOS --- */
+.videos-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+    gap: 30px;
 }
 
-.quiz-btn:active:not(:disabled) {
-    transform: translate(3px, 3px);
-    box-shadow: 0px 0px 0px var(--retro-dark);
+.video-item {
+    background-color: var(--retro-lime);
+    border: 5px solid var(--retro-dark);
+    border-radius: 15px;
+    padding: 20px;
+    box-shadow: 8px 8px 0px var(--retro-dark);
 }
 
-.quiz-btn:disabled { opacity: 0.6; cursor: not-allowed; }
-
-.quiz-btn.correct { background: var(--retro-green) !important; color: var(--retro-dark) !important; }
-.quiz-btn.wrong { background: var(--retro-pink) !important; color: var(--white) !important; }
-
-.quiz-feedback {
-    display: none; margin-top: 20px; padding: 15px;
-    background: var(--retro-cream); border-radius: 8px; 
-    border: 3px dashed var(--retro-dark);
+.video-label {
+    font-family: 'Shrikhand', cursive;
+    font-size: 1.5rem;
+    margin-bottom: 15px;
+    text-align: center;
+    color: var(--retro-dark);
 }
-.quiz-feedback.show { display: block; animation: popIn 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275); }
-.ans-result { font-weight: 900; margin-bottom: 5px; font-size: 1.1rem; }
 
-/* --- BLOCOS DE VÍDEO COMPACTOS --- */
 .video-wrapper {
     position: relative;
     padding-bottom: 56.25%;
-    height: 0;
-    border: 5px solid var(--retro-dark);
-    border-radius: 12px;
+    border: 4px solid var(--retro-dark);
+    border-radius: 8px;
     overflow: hidden;
-    box-shadow: 8px 8px 0px var(--retro-dark);
-    margin-bottom: 20px;
+    background: #000;
 }
 
 .video-wrapper iframe {
     position: absolute; top: 0; left: 0; width: 100%; height: 100%;
 }
 
-/* --- REFERÊNCIAS --- */
-.references-section {
-    background: var(--white);
+/* --- NOTÍCIAS --- */
+.news-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+}
+
+.news-card {
+    background-color: var(--white);
     border: 4px solid var(--retro-dark);
-    padding: 35px;
+    padding: 25px;
     border-radius: 12px;
-    margin-top: 50px;
     box-shadow: 6px 6px 0px var(--retro-dark);
 }
 
-.references-section h2 { margin-bottom: 20 }
+.news-card h4 {
+    color: var(--bg-orange);
+    font-size: 1.2rem;
+    font-weight: 900;
+    margin-bottom: 10px;
+}
+
+/* --- REFERÊNCIAS --- */
+.references-section {
+    background: var(--retro-green);
+    border: 5px solid var(--retro-dark);
+    padding: 40px;
+    border-radius: 15px;
+    box-shadow: 8px 8px 0px var(--retro-dark);
+    color: var(--white);
+}
+
+.references-section h2 {
+    font-family: 'Shrikhand', cursive;
+    font-size: 2rem;
+    margin-bottom: 20px;
+}
+
+.ref-list { padding-left: 20px; font-weight: 600; }
+.ref-list li { margin-bottom: 12px; }
+
+/* --- BANNERS DO JOGO (Página Detalhes) --- */
+.full-content-card {
+    background: var(--retro-cream);
+    padding: 40px;
+    border: 5px solid var(--retro-dark);
+    border-radius: 15px;
+    box-shadow: 8px 8px 0px var(--retro-dark);
+    margin-bottom: 50px;
+}
+
+.full-content-card h2 { color: var(--retro-green); font-family: 'Shrikhand', cursive; margin-bottom: 20px; font-size: 2rem; }
+.full-content-card p { font-weight: 600; margin-bottom: 15px; font-size: 1.1rem; }
+
+.banner {
+    text-align: center;
+    padding: 30px;
+    border: 5px solid var(--retro-dark);
+    border-radius: 15px;
+    margin-bottom: 30px;
+    box-shadow: 6px 6px 0px var(--retro-dark);
+}
+
+.retro-banner-pink { background-color: var(--retro-pink); color: var(--white); }
+.retro-banner-pink h2 { font-family: 'Shrikhand', cursive; font-size: 2.5rem; text-shadow: 3px 3px 0px var(--retro-dark); }
+.banner-sub { font-weight: 900; font-size: 1.3rem; color: var(--retro-dark); }
+
+/* --- QUIZ DE MITOS E VERDADES --- */
+.quiz-desc { text-align: center; font-weight: 900; font-size: 1.2rem; color: var(--white); margin-bottom: 30px; }
+
+.quiz-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 25px; }
+
+.quiz-item {
+    background: var(--retro-cream);
+    border: 5px solid var(--retro-dark);
+    border-radius: 15px;
+    padding: 25px;
+    display: flex; flex-direction: column;
+    box-shadow: 6px 6px 0px var(--retro-dark);
+}
+
+.quiz-question { margin-bottom: 20px; font-size: 1.1rem; font-weight: 900; }
+
+.quiz-options { display: flex; gap: 15px; margin-top: auto; }
+
+.quiz-btn {
+    flex: 1; padding: 12px;
+    border: 3px solid var(--retro-dark);
+    background: var(--white);
+    font-family: 'Montserrat', sans-serif; font-weight: 900;
+    font-size: 1rem; border-radius: 8px; cursor: pointer;
+    box-shadow: 4px 4px 0px var(--retro-dark);
+    transition: all 0.1s;
+}
+
+.quiz-btn:hover:not(:disabled) { background: var(--bg-orange); color: var(--white); }
+.quiz-btn:active:not(:disabled) { transform: translate(3px, 3px); box-shadow: 0px 0px 0px var(--retro-dark); }
+.quiz-btn:disabled { opacity: 0.6; cursor: not-allowed; }
+
+.quiz-btn.correct { background: var(--retro-lime) !important; color: var(--retro-dark) !important; }
+.quiz-btn.wrong { background: var(--retro-pink) !important; color: var(--white) !important; }
+
+.quiz-feedback {
+    display: none; margin-top: 20px; padding: 15px;
+    background: var(--white); border-radius: 8px; 
+    border: 3px dashed var(--retro-dark);
+}
+.quiz-feedback.show { display: block; }
+.ans-result { font-weight: 900; margin-bottom: 5px; font-size: 1.2rem; }
+
+/* --- RESPONSIVIDADE --- */
+@media (max-width: 768px) {
+    .hero-title { font-size: 3.5rem; }
+    .section-title { font-size: 2rem; }
+    .videos-grid { grid-template-columns: 1fr; }
+}
