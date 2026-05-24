@@ -83,17 +83,31 @@ h1, h2, h3, h4 {
 }
 
 /* ===== HERO ===== */
+/* ===== HERO (MODIFICADO) ===== */
 .hero {
   min-height: 100vh;
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
+  justify-content: center; /* Alinha verticalmente no centro */
   text-align: center;
   position: relative;
   overflow: hidden;
   background: var(--orange);
-  padding: 80px 20px 40px;
+  padding: 100px 24px 60px; /* Aumentado o padding para dar folga da navbar e do fundo */
+}
+
+/* O conteúdo agora é flexível e não foge da tela */
+.hero-content {
+  position: relative; /* Mudado de absolute para relative */
+  z-index: 3;
+  display: flex;
+  flex-direction: column; /* Empilha os elementos um embaixo do outro */
+  align-items: center;    /* Centraliza horizontalmente */
+  justify-content: center;
+  width: 100%;
+  max-width: 800px;       /* Limita a largura para o conteúdo não espalhar em telas ultra-wide */
+  margin: 0 auto;
 }
 
 .hero-bg {
@@ -110,15 +124,6 @@ h1, h2, h3, h4 {
   position: absolute;
   inset: 0;
   background-image: url("data:image/svg+xml,%3Csvg width='40' height='40' viewBox='0 0 40 40' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='%23ffffff' fill-opacity='0.04'%3E%3Ccircle cx='20' cy='20' r='2'/%3E%3C/g%3E%3C/svg%3E");
-}
-
-.hero-content {
-  position: absolute;
-  top: calc(50% + 15px);
-  left: 50%;
-  transform: translate(-50%, -50%);
-  z-index: 3;
-  text-align: center;
 }
 
 .hero-frame {
