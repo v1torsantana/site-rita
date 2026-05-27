@@ -361,17 +361,20 @@ h1, h2, h3, h4 {
 
 .news-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-  gap: 20px;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 16px;
 }
 
 .news-card {
   background: var(--white);
   border-radius: var(--radius);
-  padding: 28px;
+  padding: 20px;
   border: 1px solid rgba(0,0,0,.06);
   box-shadow: 0 2px 12px rgba(0,0,0,.04);
   transition: .3s;
+  text-decoration: none;
+  color: inherit;
+  display: block;
 }
 
 .news-card:hover {
